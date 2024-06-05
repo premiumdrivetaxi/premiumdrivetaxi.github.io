@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчет о смене водителя</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Отчет о смене</h1>
+        <form id="shiftForm">
+                    <label for="shiftDate">дата:</label>
+            <input type="date" id="shiftDate"  required>
+            <label for="startMileage">Пробег автомобиля в начале смены:</label>
+            <input type="number" id="startMileage" value = 0 step="0.01" required>
+            
+            <label for="endMileage">Пробег автомобиля в конце смены:</label>
+            <input type="number" id="endMileage" value = 0 step="0.01" required>
+            
+                        <label for="totalCashInCar">Наличные в машине в начале смены (Яндекс):</label>
+            <input type="number" id="totalCashInCar" value = 0 step="0.01" required>
+
+            <label for="privateCashInCar">Наличные в машине от частных поездок в начале смены:</label>
+            <input type="number" id="privateCashInCar" value = 0 step="0.01" required>
+            
+            <label for="cashEarnings">Заработано наличными:</label>
+            <input type="number" id="cashEarnings" value = 0 step="0.01" required>
+            
+            <label for="cashlessEarnings">Заработано безналичными:</label>
+            <input type="number" id="cashlessEarnings" value = 0 step="0.01" required>
+            
+            <label for="privateEarnings">Заработано частными поездками:</label>
+            <input type="number" id="privateEarnings" value = 0 step="0.01" required>
+
+            <div id="expenses">
+                <h3>Расходы с чеком</h3>
+                <div class="expense-item">
+                    <input type="text" placeholder="Наименование расхода" class="expense-name">
+                    <input type="number" placeholder="Сумма" class="expense-amount" step="0.01">
+                    <button type="button" class="remove-expense">Удалить</button>
+                </div>
+            </div>
+            <button type="button" id="addExpense">Добавить расход с чеком</button>
+
+            <div id="expensesNoCheck">
+                <h3>Расходы без чека</h3>
+                <div class="expense-item">
+                    <input type="text" placeholder="Наименование расхода" class="expense-name">
+                    <input type="number" placeholder="Сумма" class="expense-amount" step="0.01">
+                    <button type="button" class="remove-expense">Удалить</button>
+                </div>
+            </div>
+            <button type="button" id="addExpenseNoCheck">Добавить расход без чека</button>
+         
+
+            <button type="submit">Сформировать отчет</button>
+        </form>
+        <div id="result">
+            <h2>Отчет о смене:</h2>
+            <p id="report"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
