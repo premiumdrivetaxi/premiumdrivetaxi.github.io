@@ -114,9 +114,9 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
 
     navigator.clipboard.writeText(report.trim()).then(() => {
         console.log('Text copied to clipboard successfully!');
-        alert('Text copied to clipboard successfully!');
+        alert('Скопировано в буфер обмена');
     }).catch(err => {
-        console.error('Failed to copy text: ', err);
+        console.error('Ошибка копирования в буфер обмена ', err);
         alert('Failed to copy text');
     });
 });
