@@ -113,4 +113,6 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
     document.getElementById('report').innerText = report.trim();
 
     navigator.clipboard.writeText(report);
+
+    alert('Скопировано в буфер обмена')
 });
