@@ -94,8 +94,6 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
     Заработано безналичными: ${cashlessEarnings.toFixed(2)} р
     Заработано частными поездками: ${privateEarnings.toFixed(2)} р
     
-    Общая сумма заработка: ${totalEarnings.toFixed(2)} р
-    
     Расходы с чеком: ${expenseDetails.trim()}
     Расходы без чека: ${expenseNoCheckDetails.trim()}
     
@@ -107,12 +105,12 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
     Наличные в машине от частных поездок в конце смены: ${privateCashEnd.toFixed(2)} р
     -----------------------------------------------------------------------------------------
     Общая сумма заработка: ${totalEarnings.toFixed(2)} р
-     
     КПД: ${performanceCoefficient.toFixed(2)} р/км
     
-
 `;
 
 
     document.getElementById('report').innerText = report.trim();
+
+    navigator.clipboard.writeText(report);
 });
