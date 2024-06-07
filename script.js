@@ -112,7 +112,11 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
 
     document.getElementById('report').innerText = report.trim();
 
-    navigator.clipboard.writeText(report);
-
-    alert('Скопировано в буфер обмена')
+    navigator.clipboard.writeText(report.trim()).then(() => {
+        console.log('Text copied to clipboard successfully!');
+        alert('Text copied to clipboard successfully!');
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+        alert('Failed to copy text');
+    });
 });
