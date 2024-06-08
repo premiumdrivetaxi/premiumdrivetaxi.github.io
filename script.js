@@ -98,11 +98,11 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
 Расходы без чека:\n ${expenseNoCheckDetails.trim()}
 
 --------------------------------
-Всего наличных в машине в начале смены (Яндекс): ${totalCashInCar.toFixed(2)} р
-Всего наличных в машине в конце смены (Яндекс): ${CashEnd.toFixed(2)} р
+Нал в машине в начале смены (Яндекс): ${totalCashInCar.toFixed(2)} р
+Нал в машине в конце смены (Яндекс): ${CashEnd.toFixed(2)} р
 
-Наличные в машине от частных поездок в начале смены: ${privateCashInCar.toFixed(2)} р
-Наличные в машине от частных поездок в конце смены: ${privateCashEnd.toFixed(2)} р
+Нал в машине от частных поездок в начале смены: ${privateCashInCar.toFixed(2)} р
+Нал в машине от частных поездок в конце смены: ${privateCashEnd.toFixed(2)} р
 --------------------------------
 Общая сумма заработка: ${totalEarnings.toFixed(2)} р
 КПД: ${performanceCoefficient.toFixed(2)} р/км
