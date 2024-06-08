@@ -85,27 +85,27 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
     });
 
     const report = `
-    Дата: ${date.toLocaleDateString("hi-IN")}
+Дата: ${date.toLocaleDateString("hi-IN")}
     
-    Пробег в начале смены: ${startMileage.toFixed(2)} км
-    Пробег в конце смены: ${endMileage.toFixed(2)} км
-    
-    Заработано наличными: ${cashEarnings.toFixed(2)} р
-    Заработано безналичными: ${cashlessEarnings.toFixed(2)} р
-    Заработано частными поездками: ${privateEarnings.toFixed(2)} р
-    
-    Расходы с чеком: ${expenseDetails.trim()}
-    Расходы без чека: ${expenseNoCheckDetails.trim()}
-    
-    ------------------------------------------------------------------------------------------
-    Всего наличных в машине в начале смены (Яндекс): ${totalCashInCar.toFixed(2)} р
-    Всего наличных в машине в конце смены (Яндекс): ${CashEnd.toFixed(2)} р
-    
-    Наличные в машине от частных поездок в начале смены: ${privateCashInCar.toFixed(2)} р
-    Наличные в машине от частных поездок в конце смены: ${privateCashEnd.toFixed(2)} р
-    -----------------------------------------------------------------------------------------
-    Общая сумма заработка: ${totalEarnings.toFixed(2)} р
-    КПД: ${performanceCoefficient.toFixed(2)} р/км
+Пробег в начале смены: ${startMileage.toFixed(2)} км
+Пробег в конце смены: ${endMileage.toFixed(2)} км
+
+Заработано наличными: ${cashEarnings.toFixed(2)} р
+Заработано безналичными: ${cashlessEarnings.toFixed(2)} р
+Заработано частными поездками: ${privateEarnings.toFixed(2)} р
+
+Расходы с чеком:\n ${expenseDetails.trim()}
+Расходы без чека:\n ${expenseNoCheckDetails.trim()}
+
+--------------------------------
+Всего наличных в машине в начале смены (Яндекс): ${totalCashInCar.toFixed(2)} р
+Всего наличных в машине в конце смены (Яндекс): ${CashEnd.toFixed(2)} р
+
+Наличные в машине от частных поездок в начале смены: ${privateCashInCar.toFixed(2)} р
+Наличные в машине от частных поездок в конце смены: ${privateCashEnd.toFixed(2)} р
+--------------------------------
+Общая сумма заработка: ${totalEarnings.toFixed(2)} р
+КПД: ${performanceCoefficient.toFixed(2)} р/км
     
 `;
 
