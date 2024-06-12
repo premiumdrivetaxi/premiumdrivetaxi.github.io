@@ -6,7 +6,16 @@ document.getElementById('addExpenseNoCheck').addEventListener('click', function(
     addExpense('expensesNoCheck');
 });
 
+document.getElementById('driver').value = localStorage.getItem("driverName");
+
 document.getElementById('shiftDate').valueAsDate  = new Date();
+
+// accepts single representation of comic
+function addFavorite(favorite) {
+    // full list of favorited comics
+
+    localStorage.setItem("driverName", favorite);
+}
 
 function addExpense(expenseType) {
     const expenseDiv = document.createElement('div');
@@ -52,6 +61,10 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
 		const date = document.getElementById('shiftDate').valueAsDate
     const shiftDayTime = document.getElementById('dayNight').value
 
+    const driverName = document.getElementById('driver').value
+
+    addFavorite(driverName);
+
 		let privateCashEnd = privateCashInCar+privateEarnings;
     let CashEnd = totalCashInCar+cashEarnings;
 
@@ -86,6 +99,7 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
     });
 
     const report = `
+${driverName.trim()}
 Дата: ${date.toLocaleDateString("hi-IN")}
 ${shiftDayTime.trim()}
     
