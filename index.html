@@ -12,6 +12,14 @@
         <form id="shiftForm">
                     <label for="shiftDate">дата:</label>
             <input type="date" id="shiftDate"  required>
+
+            <label for="dayNight">Время суток</label>
+
+            <select name="dayNight" id="dayNight">
+                <option value="день">День</option>
+                <option value="ночь">Ночь</option>
+            </select>
+
             <label for="startMileage">Пробег автомобиля в начале смены:</label>
             <input type="number" id="startMileage" value = 0 step="0.01" required>
             

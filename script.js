@@ -50,6 +50,7 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
     const totalCashInCar = parseFloat(document.getElementById('totalCashInCar').value);
 
 		const date = document.getElementById('shiftDate').valueAsDate
+    const shiftDayTime = document.getElementById('dayNight').value
 
 		let privateCashEnd = privateCashInCar+privateEarnings;
     let CashEnd = totalCashInCar+cashEarnings;
@@ -86,6 +87,7 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
 
     const report = `
 Дата: ${date.toLocaleDateString("hi-IN")}
+${shiftDayTime.trim()}
     
 Пробег в начале смены: ${startMileage.toFixed(2)} км
 Пробег в конце смены: ${endMileage.toFixed(2)} км
@@ -96,7 +98,6 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
 
 Расходы с чеком:\n ${expenseDetails.trim()}
 Расходы без чека:\n ${expenseNoCheckDetails.trim()}
-
 --------------------------------
 Нал в машине в начале смены (Яндекс): ${totalCashInCar.toFixed(2)} р
 Нал в машине в конце смены (Яндекс): ${CashEnd.toFixed(2)} р
