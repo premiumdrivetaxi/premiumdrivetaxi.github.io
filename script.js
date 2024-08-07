@@ -98,6 +98,8 @@ document.getElementById('shiftForm').addEventListener('submit', function(event) 
         }
     });
 
+    let totalCashInCarEnd = privateCashEnd + CashEnd;
+
     const report = `
 ${driverName.trim()}
 Дата: ${date.toLocaleDateString("hi-IN")}
@@ -118,6 +120,8 @@ ${shiftDayTime.trim()}
 
 Нал в машине от частных поездок в начале смены: ${privateCashInCar.toFixed(2)} р
 Нал в машине от частных поездок в конце смены: ${privateCashEnd.toFixed(2)} р
+
+Общий нал в машине: ${totalCashInCarEnd.toFixed(2)}
 --------------------------------
 Общая сумма заработка: ${totalEarnings.toFixed(2)} р
 КПД: ${performanceCoefficient.toFixed(2)} р/км
